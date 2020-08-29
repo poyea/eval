@@ -1,7 +1,7 @@
 # <p align="center">eval</p>
 
 <p align="center">
-  Mathematical expression evaluator in Python.
+  Mathematical expression calculator in Python.
 </p>
 
 
