@@ -1,4 +1,4 @@
-from lib.tokens import Token, TokenEnum
+from eval.tokens import Token, TokenEnum
 
 SKIP = " \r\t\n"
 DIGITS = "1234567890"

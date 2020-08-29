@@ -1,5 +1,5 @@
-from lib.parse import *
-from lib.values import Number
+from eval.parse import *
+from eval.values import Number
 
 
 class Interpreter:

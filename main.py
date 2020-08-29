@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import argparse
 import sys
-from lib.evaluator import evaluate
+from eval.evaluator import evaluate
 
 
 if __name__ == "__main__":

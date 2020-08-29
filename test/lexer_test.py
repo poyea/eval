@@ -1,6 +1,6 @@
 import unittest
-from lib.lexer import Lexer
-from lib.tokens import Token, TokenEnum
+from eval.lexer import Lexer
+from eval.tokens import Token, TokenEnum
 
 
 class Tests_Lexer(unittest.TestCase):

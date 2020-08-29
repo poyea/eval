@@ -1,6 +1,6 @@
-from lib.lexer import Lexer
-from lib.parse import Parser
-from lib.interpreter import Interpreter
+from eval.lexer import Lexer
+from eval.parse import Parser
+from eval.interpreter import Interpreter
 
 
 def evaluate(expression):

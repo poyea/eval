@@ -1,7 +1,7 @@
 import unittest
-from lib.interpreter import Interpreter
-from lib.parse import *
-from lib.values import Number
+from eval.interpreter import Interpreter
+from eval.parse import *
+from eval.values import Number
 
 
 class Tests_Interpreter(unittest.TestCase):

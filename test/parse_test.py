@@ -1,6 +1,6 @@
 import unittest
-from lib.parse import *
-from lib.tokens import Token, TokenEnum
+from eval.parse import *
+from eval.tokens import Token, TokenEnum
 
 
 class Tests_Parser(unittest.TestCase):
