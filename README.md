@@ -11,18 +11,18 @@ Read from a file:
 $ cat text.txt
 1**3+5
 2**4**3
-$ python main.py -f text.txt
+$ ./main.py -f text.txt
 6.0
 15625.0
 ```
 Command-line input:
 ```bash
-$ python main.py 1 + 3**2 * 3
+$ ./main.py 1 + 3**2 * 3
 28.0
 ```
 Interpreter:
 ```bash
-$ python main.py
+$ ./main.py
 ```
 
 ## LICENSE
