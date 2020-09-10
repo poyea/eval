@@ -27,17 +27,12 @@ class Interpreter:
             raise Exception("Divide by 0 exception")
 
     def traverse_Exponential(self, node):
-        result, base, power = (
-            1,
-            self.traverse(node.num_a).val,
-            int(self.traverse(node.num_b).val),
-        )
-        while power > 0:
-            if power & 1:
-                result *= base
-            power >>= 1
-            base *= base
-        return Number(result)
+        try:
+            return Number(
+                self.traverse(node.num_a).val ** self.traverse(node.num_b).val
+            )
+        except:
+            raise Exception("Divide by 0 exception")
 
     def traverse_Positive(self, node):
         return self.traverse(node.val)

@@ -35,7 +35,7 @@ class Tests_Interpreter(unittest.TestCase):
         result = Interpreter().traverse(Exponential(Number(10), Number(5)))
         self.assertEqual(result.val, 100000)
         result = Interpreter().traverse(Exponential(Number(2), Number(10.39)))
-        self.assertEqual(result.val, 1024)
+        self.assertAlmostEqual(result.val, 1341.8428456, 7)
 
         with self.assertRaises(Exception):
             Interpreter().traverse(Divide(Number(1), Number(0)))
