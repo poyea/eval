@@ -10,7 +10,8 @@ class TokenEnum(Enum):
     MINUS = 4
     MULTIPLY = 5
     DIVIDE = 6
-    EXPONENTIAL = 7
+    INTEGRAL_DIVIDE = 7
+    EXPONENTIAL = 8
 
 
 @dataclass

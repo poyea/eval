@@ -31,6 +31,14 @@ class Tests_Interpreter(unittest.TestCase):
         result = Interpreter().traverse(Divide(Number(22), Number(7)))
         self.assertAlmostEqual(result.val, 3.1428571429, 10)
 
+    def test_integral_division(self):
+        result = Interpreter().traverse(IntegralDivide(Number(50), Number(2)))
+        self.assertEqual(result.val, 25)
+        result = Interpreter().traverse(IntegralDivide(Number(31), Number(2)))
+        self.assertAlmostEqual(result.val, 15)
+        result = Interpreter().traverse(IntegralDivide(Number(127), Number(6)))
+        self.assertAlmostEqual(result.val, 21)
+
     def test_exponential(self):
         result = Interpreter().traverse(Exponential(Number(10), Number(5)))
         self.assertEqual(result.val, 100000)

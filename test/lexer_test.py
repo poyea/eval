@@ -48,3 +48,22 @@ class Tests_Lexer(unittest.TestCase):
                 Token(TokenEnum.EXPONENTIAL),
             ],
         )
+
+    def test_complex_divide(self):
+        tokens = list(Lexer("//()//()/(/)//").generate_tokens())
+        self.assertEqual(
+            tokens,
+            [
+                Token(TokenEnum.INTEGRAL_DIVIDE),
+                Token(TokenEnum.LPAREN),
+                Token(TokenEnum.RPAREN),
+                Token(TokenEnum.INTEGRAL_DIVIDE),
+                Token(TokenEnum.LPAREN),
+                Token(TokenEnum.RPAREN),
+                Token(TokenEnum.DIVIDE),
+                Token(TokenEnum.LPAREN),
+                Token(TokenEnum.DIVIDE),
+                Token(TokenEnum.RPAREN),
+                Token(TokenEnum.INTEGRAL_DIVIDE),
+            ],
+        )

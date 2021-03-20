@@ -47,6 +47,15 @@ class Divide:
 
 
 @dataclass
+class IntegralDivide:
+    num_a: any
+    num_b: any
+
+    def __repr__(self):
+        return f"({self.num_a}//{self.num_b})"
+
+
+@dataclass
 class Exponential:
     num_a: any
     num_b: any
@@ -114,6 +123,7 @@ class Parser:
         while self.current_token != None and self.current_token.type in (
             TokenEnum.MULTIPLY,
             TokenEnum.DIVIDE,
+            TokenEnum.INTEGRAL_DIVIDE,
             TokenEnum.EXPONENTIAL,
         ):
             if self.current_token.type == TokenEnum.MULTIPLY:
@@ -122,6 +132,9 @@ class Parser:
             elif self.current_token.type == TokenEnum.DIVIDE:
                 self.advance()
                 result = Divide(result, self.factor())
+            elif self.current_token.type == TokenEnum.INTEGRAL_DIVIDE:
+                self.advance()
+                result = IntegralDivide(result, self.factor())
             elif self.current_token.type == TokenEnum.EXPONENTIAL:
                 self.advance()
                 result = Exponential(result, self.factor())

@@ -23,7 +23,15 @@ class Interpreter:
     def traverse_Divide(self, node):
         try:
             return Number(self.traverse(node.num_a).val / self.traverse(node.num_b).val)
-        except:
+        except Exception:
+            raise Exception("Divide by 0 exception")
+
+    def traverse_IntegralDivide(self, node):
+        try:
+            return Number(
+                self.traverse(node.num_a).val // self.traverse(node.num_b).val
+            )
+        except Exception:
             raise Exception("Divide by 0 exception")
 
     def traverse_Exponential(self, node):
@@ -31,7 +39,7 @@ class Interpreter:
             return Number(
                 self.traverse(node.num_a).val ** self.traverse(node.num_b).val
             )
-        except:
+        except Exception:
             raise Exception("Divide by 0 exception")
 
     def traverse_Positive(self, node):

@@ -36,7 +36,11 @@ class Lexer:
                     yield Token(TokenEnum.MULTIPLY)
             elif self.current_char == "/":
                 self.advance()
-                yield Token(TokenEnum.DIVIDE)
+                if self.current_char == "/":
+                    self.advance()
+                    yield Token(TokenEnum.INTEGRAL_DIVIDE)
+                else:
+                    yield Token(TokenEnum.DIVIDE)
             elif self.current_char == "(":
                 self.advance()
                 yield Token(TokenEnum.LPAREN)
