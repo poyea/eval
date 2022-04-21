@@ -4,7 +4,8 @@ import sys
 
 from eval.evaluator import evaluate
 
-if __name__ == "__main__":
+
+def main():
     arg_parser = argparse.ArgumentParser()
     arg_parser.add_argument("-f", action="store", dest="file", type=str)
     all_args, others = arg_parser.parse_known_args()
@@ -29,3 +30,7 @@ if __name__ == "__main__":
                 print(value)
             except Exception as e:
                 print(e)
+
+
+if __name__ == "__main__":
+    main()

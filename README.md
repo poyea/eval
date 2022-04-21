@@ -11,24 +11,20 @@ Read from a file:
 $ cat text.txt
 1**3+5
 2**4**3
-$ ./main.py -f text.txt
+$ python -m eval -f text.txt
 6.0
 15625.0
 ```
 Command-line input:
 ```bash
-$ ./main.py 1 + 3**2 * 3
+$ python -m eval 1 + 3**2 * 3
 28.0
 ```
 Interpreter:
 ```bash
-$ ./main.py
+$ python -m eval
 ```
 
-# Run tests
-```bash
-$ python -m unittest discover -s tests -p '*_test.py'
-```
 
 ## LICENSE
 MIT

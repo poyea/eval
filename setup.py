@@ -7,7 +7,7 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name="expression-parse-eval",
-    version="0.9.0",
+    version="0.10.0",
     description="Mathematical expression calculator in Python",
     long_description=README,
     long_description_content_type="text/markdown",
