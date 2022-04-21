@@ -31,6 +31,13 @@ def main():
             print(e)
             exit(-1)
     else:
+
+        def int_handler(sig, frame):
+            print("Bye bye!")
+            sys.exit(0)
+
+        signal.signal(signal.SIGINT, int_handler)
+
         while True:
             try:
                 user_input = input("eval > ")
@@ -41,10 +48,4 @@ def main():
 
 
 if __name__ == "__main__":
-
-    def int_handler(sig, frame):
-        print("Bye bye!")
-        sys.exit(0)
-
-    signal.signal(signal.SIGINT, int_handler)
     main()
