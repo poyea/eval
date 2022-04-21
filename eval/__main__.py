@@ -6,8 +6,16 @@ from eval.evaluator import evaluate
 
 
 def main():
-    arg_parser = argparse.ArgumentParser()
-    arg_parser.add_argument("-f", action="store", dest="file", type=str)
+    arg_parser = argparse.ArgumentParser(
+        prog="eval", usage="%(prog)s [expression] [-f FILE] [-h]"
+    )
+    arg_parser.add_argument(
+        "-f",
+        action="store",
+        dest="file",
+        type=str,
+        help="the file that stores expressions",
+    )
     all_args, others = arg_parser.parse_known_args()
     if all_args.file:
         with open(all_args.file) as f:
