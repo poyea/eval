@@ -1,5 +1,6 @@
 #!/usr/bin/python
 import argparse
+import signal
 import sys
 
 from eval.evaluator import evaluate
@@ -21,7 +22,7 @@ def main():
             print(value)
         except Exception as e:
             print(e)
-            exit(-3)
+            exit(-1)
     else:
         while True:
             try:
@@ -33,4 +34,10 @@ def main():
 
 
 if __name__ == "__main__":
+
+    def int_handler(sig, frame):
+        print("Bye bye!")
+        sys.exit(0)
+
+    signal.signal(signal.SIGINT, int_handler)
     main()
