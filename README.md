@@ -4,6 +4,11 @@
   Mathematical expression calculator in Python.
 </p>
 
+## Installation
+```console
+pip install expression-parse-eval
+```
+
 ## Usage
 Read from a file:
 ```bash
@@ -21,7 +26,7 @@ $ eval 1 + 3**2 * 3
 ```
 Interpreter:
 ```bash
-$ eval
+$ python -m eval
 ```
 
 ## LICENSE
