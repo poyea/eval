@@ -27,7 +27,7 @@ $ ./main.py
 
 # Run tests
 ```bash
-$ python -m unittest discover -s test -p '*_test.py'
+$ python -m unittest discover -s tests -p '*_test.py'
 ```
 
 ## LICENSE

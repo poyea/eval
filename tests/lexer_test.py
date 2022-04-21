@@ -1,4 +1,5 @@
 import unittest
+
 from eval.lexer import Lexer
 from eval.tokens import Token, TokenEnum
 

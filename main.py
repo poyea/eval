@@ -1,8 +1,8 @@
 #!/usr/bin/python
 import argparse
 import sys
-from eval.evaluator import evaluate
 
+from eval.evaluator import evaluate
 
 if __name__ == "__main__":
     arg_parser = argparse.ArgumentParser()

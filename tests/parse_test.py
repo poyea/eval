@@ -1,4 +1,5 @@
 import unittest
+
 from eval.parse import *
 from eval.tokens import Token, TokenEnum
 
